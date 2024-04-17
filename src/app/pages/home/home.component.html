@@ -1,0 +1,34 @@
+<div class="app-body">
+    <div class="container">
+      <div class="row"> 
+        <h1 class="app-title col-12">Rick and Morty</h1>
+        <div class="app-content">
+          <div class="app-searchbar col-12">
+                <div matAutocompleteOrigin #origin="matAutocompleteOrigin">
+                    <input 
+                    class="form-control"
+                        matInput 
+                        [formControl]="myControl" 
+                        [matAutocomplete]="auto"
+                        [matAutocompleteConnectedTo]="origin"
+                        (keydown.enter)="search()"
+                        (keydown)="filterSearch()"
+                    >
+                </div>
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name" (onSelectionChange)="setOption(option.id)">
+                        {{ option.name }}
+                    </mat-option>
+                </mat-autocomplete>
+          </div>
+          <div class="col-12">
+            <div class="app-buttons row">
+              <button class="btn btn-primary app-button col-3" (click)="search()" [disabled]="!searchEnabled">Search</button>
+              <button class="btn btn-primary app-button col-3" (click)="navigateToRandomCharacter()">Random</button>
+              <button class="btn btn-primary app-button col-3" (click)="navigateToFunFacts()">Fun Fact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

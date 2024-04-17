@@ -1,0 +1,52 @@
+.app {
+    &-body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-title {
+        font-size: 85px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        font-family: 'Get Schwifty', sans-serif;
+        color: #02afc5;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #97ce4c;
+        @media (max-width: 558px) {
+           font-size: 50px;
+        }
+        @media (max-width: 338px) {
+           font-size: 40px;
+        }
+    }
+
+    &-searchbar {
+        margin-bottom: 20px;
+        &-control {
+            max-height: 100%;
+            width: 100%;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        justify-content: space-between; 
+    }
+
+    &-button {
+        background-color: #02afc5;
+        border: #02afc5;
+    }
+
+    &-form {
+        width: 100%;
+    }
+}
+
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('../../../assets/fonts/get_schwifty.ttf') format('truetype');
+}
