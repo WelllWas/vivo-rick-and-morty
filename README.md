@@ -1,11 +1,6 @@
 Para rodar o projeto: 
-
-    Requisitos:
-        • Node 16 (ou acima) 
-
-    No Terminal:
-        • npm i
-        • npm start
+    • npm i
+    • npm start
 
 Para começar a utilizar o projeto, abra no seu navegador através de: http://localhost:4200
 
