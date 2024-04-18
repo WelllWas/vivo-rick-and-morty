@@ -11,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BackgroundComponent } from './components/background/background.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +18,6 @@ import { BackgroundComponent } from './components/background/background.componen
     CharacterDetailsComponent,
     HomeComponent,
     FunFactsComponent,
-    BackgroundComponent,
   ],
   imports: [
     BrowserModule,
