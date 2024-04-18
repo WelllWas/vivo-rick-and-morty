@@ -39,3 +39,8 @@ export interface character {
     url:string,
     created:Date
   }
+  
+  export interface fact {
+    id: number,
+    text:string,
+  }

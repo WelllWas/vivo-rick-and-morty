@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { RickAndMortyService } from 'src/app/services/rickandmorty.service';
 import { character, episode } from 'src/app/utils/types';
 

@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-
-interface fact {
-  id: number,
-  text:string,
-}
+import { fact } from 'src/app/utils/types';
 
 @Component({
   selector: 'app-fun-facts',
