@@ -8,7 +8,7 @@
                     <input 
                     class="form-control"
                         matInput 
-                        [formControl]="myControl" 
+                        [formControl]="inputControl" 
                         [matAutocomplete]="auto"
                         [matAutocompleteConnectedTo]="origin"
                         (keydown.enter)="search()"
@@ -23,9 +23,9 @@
           </div>
           <div class="col-12">
             <div class="app-buttons row">
-              <button class="btn btn-primary app-button col-3" (click)="search()" [disabled]="!searchEnabled">Search</button>
-              <button class="btn btn-primary app-button col-3" (click)="navigateToRandomCharacter()">Random</button>
-              <button class="btn btn-primary app-button col-3" (click)="navigateToFunFacts()">Fun Fact</button>
+              <button class="button-main app-button col-3" (click)="search()" [disabled]="!searchEnabled">Search</button>
+              <button class="button-main app-button col-3" (click)="navigateToRandomCharacter()">Random</button>
+              <button class="button-main app-button col-3" (click)="navigateToFunFacts()">Fun Fact</button>
             </div>
           </div>
         </div>

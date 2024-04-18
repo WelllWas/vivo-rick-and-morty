@@ -6,6 +6,7 @@ import { RickAndMortyService } from './services/rickandmorty.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  title = 'vivo-rick-and-morty'
   constructor(private rickAndMortyService: RickAndMortyService) {}
 
   async ngOnInit(): Promise<void> {

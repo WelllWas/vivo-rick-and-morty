@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { apiResult, character } from '../utils/types';
+import { apiResult, character, episode } from '../utils/types';
 
 
 @Injectable({
@@ -23,10 +23,21 @@ export class RickAndMortyService {
     return allResults
   }
 
-  async searchCharacter(filter:string ) {
+  async searchCharacter(filter:string ): Promise<character[]> {
     const url = `https://rickandmortyapi.com/api/character/?name=${filter}`;
     const response = await fetch(url);
     const data = await response.json();
     return data.results
+  }
+
+  async getCharacterById(id:number): Promise<character>  {
+    const url = `https://rickandmortyapi.com/api/character/${id}`;
+    const response = await fetch(url);
+    return await response.json();
+  }
+
+  async getEpisode(url:string): Promise<episode> {
+    const response = await fetch(url);
+    return await response.json();
   }
 }

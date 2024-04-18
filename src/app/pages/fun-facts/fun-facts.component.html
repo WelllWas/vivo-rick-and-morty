@@ -1,1 +1,13 @@
-<p>fun-facts works!</p>
+<div *ngIf="chosenFact | async as fact">
+  <div class="fact-header row">
+    <div class="fact-header__button col-1">
+      <button class="button-custom" (click)="back()">Back</button>
+    </div>
+    <div class="fact-title-container col-10">
+      <h1 class="fact-title">Fun Fact</h1>
+    </div>
+  </div>
+  <div class="fact-content">
+    <p class="fact-content__text">{{fact.text}}</p>
+  </div>
+</div>
