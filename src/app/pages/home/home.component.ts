@@ -18,7 +18,6 @@ export class HomeComponent {
   selectedOption!: number
   filteredOptions!: any;
   searchEnabled: boolean = false
-  // filteredOptions!: Observable<character[]> | null;
 
   constructor(private rickAndMortyService: RickAndMortyService, private router: Router) {
       this.filteredOptions = this.inputControl.valueChanges.pipe(

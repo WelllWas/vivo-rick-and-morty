@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CharacterDetailsComponent } from './character-details.component';
 import { BehaviorSubject } from 'rxjs';
 import { character } from 'src/app/utils/types';
@@ -19,7 +18,7 @@ describe('CharacterDetailsComponent', () => {
           provide: ActivatedRoute,
           useValue: {
             snapshot: {
-              paramMap: convertToParamMap({ id: '1' }), // Mocking a route parameter 'id'
+              paramMap: convertToParamMap({ id: '1' }),
             },
           },
         },
@@ -35,7 +34,7 @@ describe('CharacterDetailsComponent', () => {
     const characterData = new BehaviorSubject<character>({
       id: 1,
       name: 'Rick Sanchez',
-      image: 'path/to/image.jpg',
+      image: 'image.jpg',
       species: 'Human',
       status: 'Alive',
       gender: 'Male',

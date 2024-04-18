@@ -18,4 +18,17 @@ describe('FunFactsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display the facts title', () => {
+    fixture.detectChanges();
+    const headingElement = fixture.nativeElement.querySelector('h1');
+    expect(headingElement.textContent).toContain('Fun Fact');
+  });
+
+  it('should display the fact text', () => {
+    fixture.detectChanges();
+    const textElement = fixture.nativeElement.querySelector('p');
+    expect(textElement.textContent).toBeDefined()
+  });
+
 });
