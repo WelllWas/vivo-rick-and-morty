@@ -15,6 +15,9 @@
         color: #02afc5;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: #97ce4c;
+        @media (max-width: 767px) {
+           font-size: 70px;
+        }
         @media (max-width: 558px) {
            font-size: 50px;
         }
@@ -34,10 +37,17 @@
     &-buttons {
         display: flex;
         justify-content: space-between; 
+        @media (max-width: 991px) {
+            justify-content: center; 
+        }
     }
 
     &-button {
         width: 300px;
+        margin-bottom: 50px;
+        @media (max-width: 991px) {
+            margin: 25px;
+         }
     }
 
     &-form {
