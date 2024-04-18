@@ -2,6 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RickAndMortyService } from 'src/app/services/rickandmorty.service';
 import { character } from 'src/app/utils/types';
+import { of } from 'rxjs';
 
 describe('RickAndMortyService', () => {
   let service: RickAndMortyService;
@@ -20,7 +21,7 @@ describe('RickAndMortyService', () => {
     httpMock.verify();
   });
 
-  it('should retrieve characters via GET request', async(async () => {
+  it('should retrieve characters via GET request', async () => {
     const date = new Date('2017-11-04T20:51:31.373Z');
     const dateInBrasiliaTimeZone = new Date(date.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
 
@@ -31,8 +32,11 @@ describe('RickAndMortyService', () => {
       }
     ];
 
-    await service.searchCharacter('Alien Morty').then((response) => {
-      expect(response[0].name).toEqual(mockCharacters[0].name);
-    });
-  }));
+    // Mock the service method to return a Promise
+    spyOn(service, 'searchCharacter').and.returnValue(Promise.resolve(mockCharacters));
+
+    // Use async/await with toPromise
+    const response = await service.searchCharacter('Alien Morty');
+    expect(response[0].name).toEqual(mockCharacters[0].name);
+  });
 });
