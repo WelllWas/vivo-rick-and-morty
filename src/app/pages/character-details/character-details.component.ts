@@ -12,8 +12,8 @@ import { character, episode } from 'src/app/utils/types';
 export class CharacterDetailsComponent implements OnInit {
   id!:string | null;
   origin!:string | null;
-  character = new Subject<character>()
-  firstAppearance = new Subject<episode>();
+  character = new BehaviorSubject<character|any>({})
+  firstAppearance = new BehaviorSubject<episode|any>({});
 
   constructor(
     private router: Router,
