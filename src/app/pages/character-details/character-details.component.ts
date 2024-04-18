@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { RickAndMortyService } from 'src/app/services/rickandmorty.service';
 import { character, episode } from 'src/app/utils/types';
 
@@ -12,8 +12,8 @@ import { character, episode } from 'src/app/utils/types';
 export class CharacterDetailsComponent implements OnInit {
   id!:string | null;
   origin!:string | null;
-  character = new BehaviorSubject<character|any>({})
-  firstAppearance = new BehaviorSubject<episode|any>({});
+  character = new Subject<character>()
+  firstAppearance = new Subject<episode>();
 
   constructor(
     private router: Router,
