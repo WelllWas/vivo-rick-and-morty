@@ -12,8 +12,6 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BackgroundComponent } from './components/background/background.component';
-import { BackgroundSecondComponent } from './components/background-second/background-second.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +20,6 @@ import { BackgroundSecondComponent } from './components/background-second/backgr
     HomeComponent,
     FunFactsComponent,
     BackgroundComponent,
-    BackgroundSecondComponent
   ],
   imports: [
     BrowserModule,
